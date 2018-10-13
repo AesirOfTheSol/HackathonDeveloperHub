@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Developer Hub Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<center>
+<div>
+    <h1>Welcome!</h1>
+    <h3>Please Sign in below</h3>
+
+    <form action="logmein.php">
+        <table>
+            <tr>
+                <td class="inputdesc">E-mail address:</td>
+                <td><input name="username" type="text" value="" autofocus="autofocus"></td>
+            </tr>
+            <tr>
+                <td class="inputdesc">Password:</td>
+                <td><input name="password" type="password" value=""></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input name="submit" type="submit" value="Log In"></td>
+                <td><button onclick="location.href='createAccount.php';">Create Account</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</center>
+</body>
+</html>
