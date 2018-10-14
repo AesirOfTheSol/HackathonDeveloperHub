@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8";>
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+</head>
+<body>
+<center>
+    <div>
+        <h1>Create an Account</h1>
+        <h3>Fill out the information below to sign up!</h3>
+        <form action="createAccount.php">
+            <table>
+                <tr>
+                    <td class="inputdesc">E-mail address: </td>
+                    <td><input name="email" type="email" value="" autofocus="autofocus"></td>
+                </tr>
+                <tr>
+                    <td class="inputdesc">First Name: </td>
+                    <td><input name="fname" type="text" value=""></td>
+                </tr>
+                <tr>
+                    <td class="inputdesc">Last Name: </td>
+                    <td><input name="lname" type="text" value=""></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="inputdesc">Password: </td>
+                    <td><input name="pass0" type="password" value=""></td>
+                </tr>
+                <tr>
+                    <td class="inputdesc">Re-type Password: </td>
+                    <td><input name="pass1" type="password" value=""></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="Submit" value="Create Account"</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p><fontcolor="red">$stringMessage</p></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</center>
+</body>
+</html>
