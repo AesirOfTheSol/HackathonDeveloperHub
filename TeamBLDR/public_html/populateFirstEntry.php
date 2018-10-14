@@ -8,7 +8,7 @@
  */
 
 /**
- * This code is strictly to add a single entry to the empty table. Run this after createUserTable.mysql
+ * This code is strictly to add a single entry to the empty table. Run this after CreateTables.mysql
  */
 
 require_once '../../data_files/hackathon/DatabaseConnection.php';

@@ -1,3 +1,25 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Nick
+ * Date: 10/14/2018
+ * Time: 5:34 AM
+ * Project: TeamBLDR
+ */
+
+
+$username;
+
+if (isset($_COOKIE['user']))
+{
+    $username = $S_COOKIE['user'];
+} else if(isset$_SESSION['user'])
+{
+    $username = $S_COOKIE['user'];
+}
+else die;
+
+echo <<<_END
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,3 +46,11 @@
     </div>
 </body>
 </html>
+_END;
+
+
+
+
+
+
+?>

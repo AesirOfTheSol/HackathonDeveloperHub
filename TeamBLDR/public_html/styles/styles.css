@@ -3,7 +3,6 @@ body{
     text-align-all: center;
     alignment: center;
     font-family: Tahoma;
-    font-size: 15px;
     color: white;
 }
 
@@ -11,6 +10,7 @@ div.main {
     padding-top: 20px;
     border-radius: 10px;
     background-color: #494991;
+    color: white;
     padding: 20px;
     width: fit-content;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -48,10 +48,9 @@ table {
     text-align: center;
 }
 
-div.projTitle {
-    background-color: darkorchid;
-    border-radius: 5px;
-    width: 120px;
-    height: 120px;
-    padding: 10px 10px 10px 10px;
+img.logo {
+    height: 200px;
+    width: 200px;
 }
+
+

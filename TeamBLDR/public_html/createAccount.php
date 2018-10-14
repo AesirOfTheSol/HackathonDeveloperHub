@@ -36,7 +36,6 @@ if ($success == true)       //if a form was just submitted correctly
 $query = "SELECT u_id FROM Users WHERE e_mail='$email';";
 $res = dbquery($query);
 $row = $res->fetch_object();
-print("Query for email result: $row->e_mail");
 //data validation
 if(!isset($_GET["email"], $_GET["uname"], $_GET["fname"], $_GET["lname"], $_GET["pass0"], $_GET["pass1"]))      //If all of the forms are empty.
 {
@@ -76,12 +75,13 @@ echo <<<_END
     <title>Create an Account</title>
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
 </head>
-<body style="background-color: #D7D7D7">
+<body style="background-color: #D7D7D7;">
+
 <center>
 
 <div class="main">
     <div class="projTitle">
-        <h1>TEAM<br>BLDR</h1>
+        <img src="resources/logo-lg.png" alt="logo" class="logo">
     </div>
         <h1>Create an Account</h1>
         <h3>Fill out the information below to sign up!</h3>
@@ -112,6 +112,9 @@ echo <<<_END
                 </tr>
                 <tr>
                     <td colspan="2"><p name="prevmessage" class="warningMessage"><fontcolor="red">$stringMessage</p></td>
+                </tr>
+                <tr>
+                    <td name="success" value="true"></td>
                 </tr>
             </table>
         </form>

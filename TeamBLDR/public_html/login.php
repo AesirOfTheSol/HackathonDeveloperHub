@@ -95,7 +95,7 @@ echo <<<_END
 <center>
 <div class="main">
     <div class="projTitle">
-        <h1>TEAM<br>BLDR</h1>
+        <img src="resources/logo-lg.png" alt="logo" class="logo">
     </div>
         <h1>Welcome!</h1>
         <h3>Please Sign in below</h3>
@@ -116,15 +116,8 @@ echo <<<_END
                 </tr>
             </table>
         </form>
-        <form action="createAccount.php?success=false">
-            <table>
-                <tr>
-                    <td colspan="2"><button onclick="location.href='createAccount.php?success=false';">No Account?</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><p><fontcolor="red">$loginMessage</font></p></td>
-                </tr>
-            </table>
+        <form action="createAccount.php">
+            <input name="success" type="button" value="Don't have an account?">
         </form>
 </div>
 </center>
