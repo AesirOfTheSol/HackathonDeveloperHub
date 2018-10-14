@@ -1,4 +1,4 @@
-
+<img src="https://i.imgur.com/NJql7Nm.png" style="width: 100px;">
 
 # Team BLDR
 
