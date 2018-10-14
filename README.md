@@ -15,6 +15,6 @@ This would benefit developers because it takes away the hassle of trying to find
 
 
 # The Team
-Nicholas Motta - Lead Developer
-Sarah Meninger - HTML developer
-Brahim Azeni - Graphics Designer
+Nicholas Motta - Lead Developer<br>
+Sarah Meninger - HTML developer<br>
+Brahim Azeni - Graphics Designer<br>
