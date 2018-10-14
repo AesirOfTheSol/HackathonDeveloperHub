@@ -1,0 +1,43 @@
+@keyframes selectItem {
+    from {background-color: #494991;}
+    to {background-color: #a55eea;}
+}
+
+body {
+    font-family: Tahoma;
+}
+
+.navbar  {
+    width: 100%;
+    background-color: #494991;
+    overflow: auto;
+    border-radius: 8px;
+    padding: 8px 8px 8px 8px;
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.pic {
+    float: left;
+    height: 50px;
+    width: 50px;
+    padding-right: 20px;
+
+}
+
+.navbar a:hover {
+    border-radius: 10px;
+    animation-name: selectItem;
+    animation-duration: .2s;
+    background-color: #a55eea;
+}
+
+.navbar a.image {
+    padding: 0px;
+}

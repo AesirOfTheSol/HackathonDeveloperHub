@@ -12,7 +12,7 @@ require_once '../../data_files/DatabaseConnection.php';
  * This file is the create account interface.
  */
 //Variables
-$stringMessage = "";
+$stringMessage = $_GET["prevmessage"];
 $success;                 //stores whether or not an account was successfully created.
 $email = $_GET["email"];
 $username = $_GET["uname"];
@@ -41,25 +41,15 @@ print("Query for email result: $row->e_mail");
 if(!isset($_GET["email"], $_GET["uname"], $_GET["fname"], $_GET["lname"], $_GET["pass0"], $_GET["pass1"]))      //If all of the forms are empty.
 {
     $stringMessage = "Please fill out the form.";
-} else if(true)         //if the email already exists in the database.
-
-
-
-//check in the server for if the user already exists
-
-if ($row->u_id === null)          //If he doesn't exist
-{
-    echo "<p>He doesn't exist! $row->u_id</p>";
 }
-else if($row->u_id !==null)
+else if($row->u_id != null)         //if the email already exists in the database.
 {
-    $stringMessage = "Account already created with this e-mail. Only one account per person.";
+    //call the form again.
+    $stringMessage = "A developer already exists with that e-mail!";
 }
-
-//If the passwords DO NOT MATCH
-if (!passwordMatches($firstPassword, $secondPassword))
+else if (!passwordMatches($firstPassword, $secondPassword))  //If the passwords DO NOT MATCH
 {
-    $stringMessage = "Sorry, please make sure your passwords match!";
+    $stringMessage = "Please make sure your passwords match!";
 }
 
 
@@ -84,9 +74,9 @@ echo <<<_END
 <head>
     <meta charset="UTF-8";>
     <title>Create an Account</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
 </head>
-<body>
+<body style="background-color: #D7D7D7">
 <center>
 
 <div class="main">
@@ -121,7 +111,7 @@ echo <<<_END
                     <td colspan="2"><input type="Submit" value="Create Account"</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><p class="warningMessage"><fontcolor="red">$stringMessage</p></td>
+                    <td colspan="2"><p name="prevmessage" class="warningMessage"><fontcolor="red">$stringMessage</p></td>
                 </tr>
             </table>
         </form>

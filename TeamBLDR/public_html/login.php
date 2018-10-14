@@ -16,6 +16,7 @@
  */
 
 session_start();
+require_once '../../data_files/DatabaseConnection.php';
 
 //Variables
 $loginMessage;          //variable holds message to display below login button in case login attempt was unsuccessful.
@@ -41,7 +42,7 @@ if (isset($_GET['auth']))       //If there was a login attempt.
 
 
 //Check the database for the username and pass
-$query = "SELECT uname, password FROM Users WHERE e_mail='$email';";
+$query = "SELECT u_name, password FROM Users WHERE e_mail='$email';";
 $res = dbquery($query);
 $row =$res->fetch_object();
 $usernameMatches = false;
@@ -74,7 +75,7 @@ if ($usernameMatches && $passwordMatches)
     $_SESSION["userID"] = $row->u_id;
     $_SESSION["auth"] = true;       //authorized to go in.
     setcookie("user", $_SESSION['userID'],time()+2567800);
-    header('Location: dashboard.php');      //brings user to the dashboard.
+    header('Location: dashboard.html');      //brings user to the dashboard.
 }
 
 
@@ -87,10 +88,10 @@ echo <<<_END
 <head>
     <meta charset="UTF-8">
     <title>Developer Hub Login</title>
-    <link rel="stylesheet" href="styles.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css" media="screen" type="text/css">
     
 </head>
-<body>
+<body style="background-color: #D7D7D7">
 <center>
 <div class="main">
     <div class="projTitle">
